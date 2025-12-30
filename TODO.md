@@ -25,8 +25,8 @@
 ## フェーズ2: バックエンド構築
 
 ### 2.1 Express.jsプロジェクトのセットアップ
-- [ ] backend/package.json作成
-- [ ] 必要な依存関係のインストール
+- [x] backend/package.json作成
+- [x] 必要な依存関係のインストール
   - express
   - typescript, @types/node, @types/express
   - ts-node, tsx（開発用）
@@ -34,79 +34,79 @@
   - cors, @types/cors
   - zod（バリデーション）
   - @anthropic-ai/sdk（Claude API）
-- [ ] backend/tsconfig.json作成
-- [ ] backend/src/ディレクトリ構造作成
-- [ ] backend/.env.example作成
+- [x] backend/tsconfig.json作成
+- [x] backend/src/ディレクトリ構造作成
+- [x] backend/.env.example作成
 
 ### 2.2 Prismaセットアップ
-- [ ] Prismaインストール（prisma, @prisma/client）
-- [ ] backend/prisma/schema.prisma作成
-- [ ] Conversationモデル定義
-- [ ] Messageモデル定義
-- [ ] Roleエラム定義
-- [ ] prisma migrate dev実行（初回マイグレーション）
-- [ ] prisma generateでクライアント生成
+- [x] Prismaインストール（prisma, @prisma/client）
+- [x] backend/prisma/schema.prisma作成
+- [x] Conversationモデル定義
+- [x] Messageモデル定義
+- [x] Roleエラム定義
+- [x] prisma migrate dev実行（初回マイグレーション）
+- [x] prisma generateでクライアント生成
 
 ### 2.3 基本設定ファイルの作成
-- [ ] backend/src/config/database.ts（Prismaクライアント設定）
-- [ ] backend/src/config/claude.ts（Claude API設定）
-- [ ] backend/src/middleware/errorHandler.ts
-- [ ] backend/src/middleware/logger.ts
+- [x] backend/src/config/database.ts（Prismaクライアント設定）
+- [x] backend/src/config/claude.ts（Claude API設定）
+- [x] backend/src/middleware/errorHandler.ts
+- [x] backend/src/middleware/logger.ts
 
 ### 2.4 サービス層の実装
-- [ ] backend/src/services/claude.service.ts
-  - [ ] Claude APIクライアントの初期化
-  - [ ] メッセージ送信とストリーミング応答の実装
-  - [ ] エラーハンドリング
-- [ ] backend/src/services/conversation.service.ts
-  - [ ] 会話の作成
-  - [ ] 会話一覧の取得
-  - [ ] 会話詳細の取得
-  - [ ] 会話の更新
-  - [ ] 会話の削除
-  - [ ] メッセージの保存
+- [x] backend/src/services/claude.service.ts
+  - [x] Claude APIクライアントの初期化
+  - [x] メッセージ送信とストリーミング応答の実装
+  - [x] エラーハンドリング
+- [x] backend/src/services/conversation.service.ts
+  - [x] 会話の作成
+  - [x] 会話一覧の取得
+  - [x] 会話詳細の取得
+  - [x] 会話の更新
+  - [x] 会話の削除
+  - [x] メッセージの保存
 
 ### 2.5 コントローラーの実装
-- [ ] backend/src/controllers/chat.controller.ts
-  - [ ] メッセージ送信エンドポイント（ストリーミング対応）
-  - [ ] 新規会話作成エンドポイント
-- [ ] backend/src/controllers/conversation.controller.ts
-  - [ ] 会話一覧取得エンドポイント
-  - [ ] 会話詳細取得エンドポイント
-  - [ ] 会話更新エンドポイント
-  - [ ] 会話削除エンドポイント
+- [x] backend/src/controllers/chat.controller.ts
+  - [x] メッセージ送信エンドポイント（ストリーミング対応）
+  - [x] 新規会話作成エンドポイント
+- [x] backend/src/controllers/conversation.controller.ts
+  - [x] 会話一覧取得エンドポイント
+  - [x] 会話詳細取得エンドポイント
+  - [x] 会話更新エンドポイント
+  - [x] 会話削除エンドポイント
 
 ### 2.6 ルーティングの実装
-- [ ] backend/src/routes/chat.routes.ts
-- [ ] backend/src/routes/conversation.routes.ts
+- [x] backend/src/routes/chat.routes.ts
+- [x] backend/src/routes/conversation.routes.ts
 
 ### 2.7 Expressアプリケーションの構築
-- [ ] backend/src/app.ts
-  - [ ] Express初期化
-  - [ ] ミドルウェア設定（CORS, JSON parser, logger）
-  - [ ] ルート登録
-  - [ ] エラーハンドラー登録
-- [ ] backend/src/index.ts（エントリーポイント）
-  - [ ] データベース接続確認
-  - [ ] サーバー起動
+- [x] backend/src/app.ts
+  - [x] Express初期化
+  - [x] ミドルウェア設定（CORS, JSON parser, logger）
+  - [x] ルート登録
+  - [x] エラーハンドラー登録
+- [x] backend/src/index.ts（エントリーポイント）
+  - [x] データベース接続確認
+  - [x] サーバー起動
 
 ### 2.8 型定義の作成
-- [ ] backend/src/types/api.ts（APIリクエスト/レスポンス型）
-- [ ] backend/src/types/models.ts（ドメインモデル型）
+- [x] backend/src/types/api.ts（APIリクエスト/レスポンス型）
+- [x] backend/src/types/models.ts（ドメインモデル型）
 
 ### 2.9 バックエンドテストの実装
-- [ ] Jestとテスト関連パッケージのインストール
-- [ ] jest.config.js作成
-- [ ] backend/tests/unit/services/claude.service.test.ts
-  - [ ] Claude APIモックの作成
-  - [ ] メッセージ送信のテスト
-  - [ ] エラーハンドリングのテスト
-- [ ] backend/tests/unit/services/conversation.service.test.ts
-  - [ ] 会話CRUD操作のテスト
-  - [ ] メッセージ保存のテスト
-- [ ] backend/tests/integration/api.test.ts
-  - [ ] 各エンドポイントの基本動作テスト
-  - [ ] エラーケースのテスト
+- [x] Jestとテスト関連パッケージのインストール
+- [x] jest.config.js作成
+- [x] backend/tests/unit/services/claude.service.test.ts
+  - [x] Claude APIモックの作成
+  - [x] メッセージ送信のテスト
+  - [x] エラーハンドリングのテスト
+- [x] backend/tests/unit/services/conversation.service.test.ts
+  - [x] 会話CRUD操作のテスト
+  - [x] メッセージ保存のテスト
+- [x] backend/tests/integration/api.test.ts
+  - [x] 各エンドポイントの基本動作テスト
+  - [x] エラーケースのテスト
 
 ---
 
