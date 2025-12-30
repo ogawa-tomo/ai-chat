@@ -8,17 +8,17 @@
 ## フェーズ1: プロジェクトセットアップ
 
 ### 1.1 基本構成の作成
-- [ ] ルートディレクトリにpackage.json作成（ワークスペース設定）
-- [ ] .gitignore作成（node_modules, .env, dist等）
-- [ ] .env.example作成（環境変数のテンプレート）
-- [ ] README.md作成（プロジェクト概要とセットアップ手順）
-- [ ] docker-compose.yml作成（PostgreSQL用）
-- [ ] ルートtsconfig.json作成（共通設定）
+- [x] ルートディレクトリにpackage.json作成（ワークスペース設定）
+- [x] .gitignore作成（node_modules, .env, dist等）
+- [x] .env.example作成（環境変数のテンプレート）
+- [x] README.md作成（プロジェクト概要とセットアップ手順）
+- [x] docker-compose.yml作成（PostgreSQL用）
+- [x] ルートtsconfig.json作成（共通設定）
 
 ### 1.2 ディレクトリ構造の作成
-- [ ] frontend/ディレクトリ作成
-- [ ] backend/ディレクトリ作成
-- [ ] docs/ディレクトリ作成
+- [x] frontend/ディレクトリ作成
+- [x] backend/ディレクトリ作成
+- [x] docs/ディレクトリ作成
 
 ---
 
