@@ -6,10 +6,10 @@ export default function Home() {
       <main className="flex flex-col items-center gap-8 px-8 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            AI Chat Bot
+            AIチャットボット
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Chat with Claude AI and save your conversation history
+            Claude AIと会話して、履歴を保存できます
           </p>
         </div>
 
@@ -18,13 +18,13 @@ export default function Home() {
             href="/chat"
             className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
           >
-            Start Chatting
+            チャットを開始
           </Link>
           <Link
             href="/history"
             className="flex-1 px-6 py-3 bg-gray-200 text-gray-900 rounded-lg font-semibold text-center hover:bg-gray-300 transition-colors"
           >
-            View History
+            履歴を見る
           </Link>
         </div>
       </main>
