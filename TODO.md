@@ -113,82 +113,82 @@
 ## フェーズ3: フロントエンド構築
 
 ### 3.1 Next.jsプロジェクトのセットアップ
-- [ ] Next.js 14+ (App Router)のインストール
-- [ ] frontend/package.json作成
-- [ ] Tailwind CSSのインストールと設定
-- [ ] frontend/tsconfig.json作成
-- [ ] frontend/next.config.js作成
-- [ ] frontend/.env.example作成
+- [x] Next.js 14+ (App Router)のインストール
+- [x] frontend/package.json作成
+- [x] Tailwind CSSのインストールと設定
+- [x] frontend/tsconfig.json作成
+- [x] frontend/next.config.js作成
+- [x] frontend/.env.example作成
 
 ### 3.2 基本レイアウトの作成
-- [ ] frontend/src/app/layout.tsx（ルートレイアウト）
-- [ ] frontend/src/app/page.tsx（ホームページ）
-- [ ] frontend/src/app/globals.css（グローバルスタイル）
+- [x] frontend/src/app/layout.tsx（ルートレイアウト）
+- [x] frontend/src/app/page.tsx（ホームページ）
+- [x] frontend/src/app/globals.css（グローバルスタイル）
 
 ### 3.3 型定義とユーティリティ
-- [ ] frontend/src/lib/types.ts
-  - [ ] Message型
-  - [ ] Conversation型
-  - [ ] APIレスポンス型
-- [ ] frontend/src/lib/api.ts
-  - [ ] APIクライアントのベース設定
-  - [ ] エラーハンドリング
+- [x] frontend/src/lib/types.ts
+  - [x] Message型
+  - [x] Conversation型
+  - [x] APIレスポンス型
+- [x] frontend/src/lib/api.ts
+  - [x] APIクライアントのベース設定
+  - [x] エラーハンドリング
 
 ### 3.4 カスタムフックの実装
-- [ ] frontend/src/hooks/useChat.ts
-  - [ ] メッセージ送信
-  - [ ] ストリーミング応答の受信
-  - [ ] 会話状態管理
-  - [ ] エラーハンドリング
+- [x] frontend/src/hooks/useChat.ts
+  - [x] メッセージ送信
+  - [x] ストリーミング応答の受信
+  - [x] 会話状態管理
+  - [x] エラーハンドリング
 
 ### 3.5 チャット画面のコンポーネント実装
-- [ ] frontend/src/app/chat/page.tsx（チャットページ）
-- [ ] frontend/src/components/chat/ChatInterface.tsx
-  - [ ] メッセージ一覧とメッセージ入力を統合
-  - [ ] 新規会話の開始
-- [ ] frontend/src/components/chat/MessageList.tsx
-  - [ ] メッセージ一覧の表示
-  - [ ] 自動スクロール
-- [ ] frontend/src/components/chat/MessageInput.tsx
-  - [ ] テキスト入力フォーム
-  - [ ] Enter/Shift+Enterのハンドリング
-  - [ ] 送信ボタン
-- [ ] frontend/src/components/chat/StreamingMessage.tsx
-  - [ ] ストリーミング中のメッセージ表示
-  - [ ] ローディングインジケーター
+- [x] frontend/src/app/chat/page.tsx（チャットページ）
+- [x] frontend/src/components/chat/ChatInterface.tsx
+  - [x] メッセージ一覧とメッセージ入力を統合
+  - [x] 新規会話の開始
+- [x] frontend/src/components/chat/MessageList.tsx
+  - [x] メッセージ一覧の表示
+  - [x] 自動スクロール
+- [x] frontend/src/components/chat/MessageInput.tsx
+  - [x] テキスト入力フォーム
+  - [x] Enter/Shift+Enterのハンドリング
+  - [x] 送信ボタン
+- [x] frontend/src/components/chat/StreamingMessage.tsx
+  - [x] ストリーミング中のメッセージ表示
+  - [x] ローディングインジケーター
 
 ### 3.6 履歴画面のコンポーネント実装
-- [ ] frontend/src/app/history/page.tsx（履歴ページ）
-- [ ] frontend/src/components/history/ConversationList.tsx
-  - [ ] 会話一覧の表示
-  - [ ] ページネーション
-  - [ ] プレビュー表示
-- [ ] frontend/src/components/history/ConversationDetail.tsx
-  - [ ] 会話の詳細表示
-  - [ ] タイトル編集
-  - [ ] 会話削除
+- [x] frontend/src/app/history/page.tsx（履歴ページ）
+- [x] frontend/src/components/history/ConversationList.tsx
+  - [x] 会話一覧の表示
+  - [x] ページネーション
+  - [x] プレビュー表示
+- [x] frontend/src/components/history/ConversationDetail.tsx
+  - [x] 会話の詳細表示
+  - [x] タイトル編集
+  - [x] 会話削除
 
 ### 3.7 共通コンポーネントの実装
-- [ ] frontend/src/components/ui/Button.tsx
-- [ ] frontend/src/components/ui/Input.tsx
-- [ ] frontend/src/components/ui/Loading.tsx
-- [ ] frontend/src/components/ui/ErrorMessage.tsx
+- [x] frontend/src/components/ui/Button.tsx
+- [x] frontend/src/components/ui/Input.tsx
+- [x] frontend/src/components/ui/Loading.tsx
+- [x] frontend/src/components/ui/ErrorMessage.tsx
 
 ### 3.8 レスポンシブデザインの調整
-- [ ] モバイル表示の最適化
-- [ ] タブレット表示の最適化
-- [ ] デスクトップ表示の最適化
+- [x] モバイル表示の最適化
+- [x] タブレット表示の最適化
+- [x] デスクトップ表示の最適化
 
 ### 3.9 フロントエンドテストの実装
-- [ ] Jest、React Testing Libraryのインストール
-- [ ] jest.config.js作成
-- [ ] frontend/src/components/chat/ChatInterface.test.tsx
-  - [ ] レンダリングテスト
-  - [ ] メッセージ送信のテスト
-- [ ] frontend/src/components/chat/MessageList.test.tsx
-  - [ ] メッセージ表示のテスト
-- [ ] frontend/src/hooks/useChat.test.ts
-  - [ ] フックのロジックテスト
+- [x] Jest、React Testing Libraryのインストール
+- [x] jest.config.js作成
+- [x] frontend/src/components/chat/ChatInterface.test.tsx
+  - [x] レンダリングテスト
+  - [x] メッセージ送信のテスト
+- [x] frontend/src/components/chat/MessageList.test.tsx
+  - [x] メッセージ表示のテスト
+- [x] frontend/src/hooks/useChat.test.ts
+  - [x] フックのロジックテスト
 
 ---
 
