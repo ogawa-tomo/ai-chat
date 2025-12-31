@@ -20,10 +20,7 @@ export class ClaudeService {
         content: msg.content,
       }));
 
-      // Set up SSE headers
-      res.setHeader('Content-Type', 'text/event-stream');
-      res.setHeader('Cache-Control', 'no-cache');
-      res.setHeader('Connection', 'keep-alive');
+      // Note: SSE headers should be set by the controller before calling this method
 
       let fullResponse = '';
 
@@ -44,8 +41,23 @@ export class ClaudeService {
       // Handle errors
       stream.on('error', (error) => {
         console.error('Claude API streaming error:', error);
+
+        let errorMessage = 'Stream error occurred';
+        if (error instanceof Anthropic.APIError) {
+          // Provide more specific error messages
+          if (error.status === 400 && error.message.includes('credit balance')) {
+            errorMessage = 'Claude API credit balance is too low. Please check your billing settings.';
+          } else if (error.status === 401) {
+            errorMessage = 'Invalid API key. Please check your configuration.';
+          } else if (error.status === 429) {
+            errorMessage = 'Rate limit exceeded. Please try again later.';
+          } else {
+            errorMessage = `Claude API error: ${error.message}`;
+          }
+        }
+
         res.write(
-          `data: ${JSON.stringify({ type: 'error', message: 'Stream error occurred' })}\n\n`
+          `data: ${JSON.stringify({ type: 'error', message: errorMessage })}\n\n`
         );
         res.end();
       });

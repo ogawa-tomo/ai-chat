@@ -18,6 +18,11 @@ export class ChatController {
       // Validate request
       const { conversationId, message, model } = sendMessageSchema.parse(req.body);
 
+      // Set up SSE headers first (before any write operations)
+      res.setHeader('Content-Type', 'text/event-stream');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.setHeader('Connection', 'keep-alive');
+
       // Create new conversation if conversationId is null
       let finalConversationId = conversationId;
       if (!finalConversationId) {
@@ -59,6 +64,18 @@ export class ChatController {
         assistantResponse
       );
     } catch (error) {
+      // If headers are already sent (SSE stream started), send error via SSE
+      if (res.headersSent) {
+        const errorMessage =
+          error instanceof Error ? error.message : 'An unknown error occurred';
+        res.write(
+          `data: ${JSON.stringify({ type: 'error', message: errorMessage })}\n\n`
+        );
+        res.end();
+        return;
+      }
+
+      // Otherwise, use normal error handling
       next(error);
     }
   }
